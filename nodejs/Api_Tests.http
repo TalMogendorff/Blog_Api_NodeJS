@@ -1,0 +1,68 @@
+@local = http://localhost:3000
+
+###
+
+POST {{local}}/users/register
+content-type: application/json
+
+{
+    "first_name": "Tal",
+    "last_name": "Mogendorff",
+    "email": "TalMogendorff@adminadmin.co.il",
+    "password": "adminadmin",
+    "age": 24,
+    "birth_date": "10/02/1997"
+}
+
+###
+
+POST {{local}}/users/login
+content-type: application/json
+
+{
+    "username": "TalMogendorff@adminadmin.co.il",
+    "password": "adminadmin"
+}
+
+###
+
+GET {{local}}/users/logout
+content-type: application/json
+
+###
+
+POST {{local}}/posts/post
+content-type: application/json
+
+{
+    "title": "Test 5888",
+    "body": "Test 2"
+}
+
+
+
+###
+
+PUT {{local}}/posts/post/60d871a8085b430dfc6ee888
+content-type: application/json
+
+{
+    "title": "Test 4",
+    "body": "Test 2"
+}
+
+
+###
+Delete {{local}}/posts/post/60d88cf0c5095f1fd42281ba
+content-type: application/json
+
+###
+
+GET {{local}}/posts/all-posts
+content-type: application/json
+
+
+###
+
+GET {{local}}/posts/specific-post/60d886d93f218e2e642172ab
+content-type: application/json
